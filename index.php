@@ -28,11 +28,50 @@
 
         <?php
 
-        $pdo = new PDO('mysql:host=localhost;dbname=hack24', 'root', '9ZfsGrdn6N');
-        $statement = $pdo->query("SELECT * FROM User_data");
-        $row = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-         ?>
+        // $pdo = new PDO('mysql:host=localhost;dbname=hack24', 'root', '9ZfsGrdn6N');
+        // $statement = $pdo->query("SELECT * FROM User_data");
+        // $row = $statement->fetchAll(PDO::FETCH_ASSOC);
+        // foreach ($statement as $key => $value) {
+        //     # code...
+        // }
+
+        $jobData = new JobData();
+
+        // $users = $jobData->getUsers();
+
+        // $companies = $jobData->getCompanies();
+        $cultures = $jobData->getCultures();
+
+        echo "<pre>".print_r($cultures,true)."</pre>";
+
+        $columns_to_add = array( 'satisfaction', 'prof_development', 'appr_pay', 'treatment', 'worklife', 'culture' );
+
+        foreach ($cultures as $culture) {
+            $total = 0;
+            $total += $culture['satisfaction'];
+            $total += $culture['prof_development'];
+            $total += $culture['appr_pay'];
+            $total += $culture['treatment'];
+            $total += $culture['worklife'];
+            $total += $culture['culture'];
+            echo "<pre>".print_r((($total / 42) * 100),true)."</pre>";
+            echo "<pre>".print_r(getPercentage( $cultures, $columns_to_add ),true)."</pre>";
+        }
+
+        // $departments = $jobData->getDepartments();
+        // $managers = $jobData->getManagers();
+        // $managerratings = $jobData->getManagerRatings();
+        // $role = $jobData->getRole();
+
+        // echo "<pre>".print_r($companies,true)."</pre>";
+        // echo "<pre>".print_r($cultures,true)."</pre>";
+        // echo "<pre>".print_r($departments,true)."</pre>";
+        // echo "<pre>".print_r($managers,true)."</pre>";
+        // echo "<pre>".print_r($managerratings,true)."</pre>";
+        // echo "<pre>".print_r($role,true)."</pre>";
+
+        ?>
 
           <div class="row placeholders">
             <div class="col-xs-6 col-sm-3 placeholder">
@@ -59,39 +98,8 @@
 
           <h2 class="sub-header">Section title</h2>
           <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>USER_ID</th>
-                  <th>USERNAME</th>
-                  <th>PASSWORD</th>
-                  <th>EMAIL</th>
-                  <th>SECURITY_Q</th>
-                  <th>SECURITY_A</th>
-                  <th>AGE</th>
-                  <th>GENDER</th>
-                  <th>LGBT</th>
-                  <th>FAMILY_STATUS</th>
-                  <th>ETHNICITY</th>
-                </tr>
-              </thead>
-              <tbody>
-              <?php foreach ($row as $user): ?>
-                <tr>
-                    <td><?php echo $user['user_id'] ?></td>
-                    <td><?php echo $user['username'] ?></td>
-                    <td><?php echo $user['password'] ?></td>
-                    <td><?php echo $user['email'] ?></td>
-                    <td><?php echo $user['security_q'] ?></td>
-                    <td><?php echo $user['security_a'] ?></td>
-                    <td><?php echo $user['age'] ?></td>
-                    <td><?php echo $user['lgbt'] ?></td>
-                    <td><?php echo $user['family_status'] ?></td>
-                    <td><?php echo $user['ethnicity'] ?></td>
-                </tr>
-              <?php endforeach ?>
-              </tbody>
-            </table>
+            <?php echo "<pre>".print_r(getManagerPercentage( 4 ),true)."</pre>"; ?>
+            <?php echo "<pre>".print_r(getCompanyPercentage( 4 ),true)."</pre>"; ?>
           </div>
         </div>
       </div>

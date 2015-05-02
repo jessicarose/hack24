@@ -1,4 +1,5 @@
-
+<?php include 'inc/data.class.php'; ?>
+<?php include 'inc/functions.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
