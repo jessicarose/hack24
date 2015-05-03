@@ -154,7 +154,7 @@ jQuery(document).ready(function ($) {
 
     data: {
         columns: [
-            ['data', 80.4]
+            ['Managers average overall score', 80.4]
         ],
         type: 'gauge',
         onclick: function (d, i) { console.log("onclick", d, i); },
@@ -223,7 +223,7 @@ setTimeout(function () {
 
     data: {
         columns: [
-            ['data', 90.4]
+            ['Companys Culture rating', 90.4]
         ],
         type: 'gauge',
         onclick: function (d, i) { console.log("onclick", d, i); },
