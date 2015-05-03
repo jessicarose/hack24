@@ -41,23 +41,23 @@
         // $users = $jobData->getUsers();
 
         // $companies = $jobData->getCompanies();
-        $cultures = $jobData->getCultures();
+        // $cultures = $jobData->getCultures();
 
-        echo "<pre>".print_r($cultures,true)."</pre>";
+        // echo "<pre>".print_r($cultures,true)."</pre>";
 
-        $columns_to_add = array( 'satisfaction', 'prof_development', 'appr_pay', 'treatment', 'worklife', 'culture' );
+        // $columns_to_add = array( 'satisfaction', 'prof_development', 'appr_pay', 'treatment', 'worklife', 'culture' );
 
-        foreach ($cultures as $culture) {
-            $total = 0;
-            $total += $culture['satisfaction'];
-            $total += $culture['prof_development'];
-            $total += $culture['appr_pay'];
-            $total += $culture['treatment'];
-            $total += $culture['worklife'];
-            $total += $culture['culture'];
-            echo "<pre>".print_r((($total / 42) * 100),true)."</pre>";
-            echo "<pre>".print_r(getPercentage( $cultures, $columns_to_add ),true)."</pre>";
-        }
+        // foreach ($cultures as $culture) {
+        //     $total = 0;
+        //     $total += $culture['satisfaction'];
+        //     $total += $culture['prof_development'];
+        //     $total += $culture['appr_pay'];
+        //     $total += $culture['treatment'];
+        //     $total += $culture['worklife'];
+        //     $total += $culture['culture'];
+        //     echo "<pre>".print_r((($total / 42) * 100),true)."</pre>";
+        //     echo "<pre>".print_r(getPercentage( $cultures, $columns_to_add ),true)."</pre>";
+        // }
 
         // $departments = $jobData->getDepartments();
         // $managers = $jobData->getManagers();
@@ -98,8 +98,8 @@
 
           <h2 class="sub-header">Section title</h2>
           <div class="table-responsive">
-            <?php echo "<pre>".print_r(getManagerPercentage( 4 ),true)."</pre>"; ?>
-            <?php echo "<pre>".print_r(getCompanyPercentage( 4 ),true)."</pre>"; ?>
+          <?php echo "<pre>".print_r(getCulturePercentages( 10 ),true)."</pre>"; ?>
+          <?php echo "<pre>".print_r(getManagerPercentages( 8 ),true)."</pre>"; ?>
           </div>
         </div>
       </div>
