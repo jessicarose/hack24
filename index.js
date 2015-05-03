@@ -27,21 +27,6 @@ jQuery(document).ready(function ($) {
     },
     plugins: [
       {
-        name: "central-click",
-        options: {
-          text: "",
-          style: {
-            "font-size": "12px",
-            "font-style": "italic",
-            "font-family": "Source Sans Pro, sans-serif",
-            //"font-weight": "700",
-            "text-anchor": "middle",
-            "fill": "white"
-          },
-          attr: {dy: "65px"},
-        }
-      },
-      {
         name: "lines",
         options: {
           format: [
@@ -114,21 +99,6 @@ jQuery(document).ready(function ($) {
         classed: function (item) {return item.text.split(" ").join("");}
       },
       plugins: [
-        {
-          name: "central-click",
-          options: {
-            text: "",
-            style: {
-              "font-size": "12px",
-              "font-style": "italic",
-              "font-family": "Source Sans Pro, sans-serif",
-              //"font-weight": "700",
-              "text-anchor": "middle",
-              "fill": "white"
-            },
-            attr: {dy: "65px"},
-          }
-        },
         {
           name: "lines",
           options: {
