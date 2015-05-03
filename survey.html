@@ -1,0 +1,210 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Submit Your Review</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+               <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600,200italic,600italic&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
+
+                <style>
+                  .bubbleChart, .squiggleChart, .bubbleChartMan{
+                    min-width: 100px;
+                    max-width: 700px;
+                    height: 700px;
+                    margin: 0 auto;
+                  }
+                   body {
+                      background-color: #EBF4FA;
+                      background-size: 100% 100%;
+                  }
+                  html {
+                      height: 100%
+                  }
+                </style>
+  </head>
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">How Baller Is Your Job?</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="index.html">Demo</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search company...">
+          </form>
+          <div class="navbar-collapse collapse" id="navbar-collapsible">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="#section1">Our Purpose</a></li>
+                <li><a href="#section2">Overview Example</a></li>
+                <li><a href="#section3">Culture Example</a></li>
+                <li><a href="#section4">Manager Example</a></li>
+                <li>&nbsp;</li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-heart-o fa-lg"></i></a></li>
+            </ul>
+        </div>
+        </div>
+      </div>
+    </nav>
+
+ <section class="container-fluid" id="section1">
+        <div class="col-sm-11 col-sm-offset-1">
+          <h1 class="page-header"><b>Sumbit Your Review</b></h1>
+            <h2 class="sub-header">Of any current or former role.</h2>
+              <p class="text-justify">Data collected will be presented as individual data points to better protect reviewer identity.</p>
+               <form>
+Company name:<br>
+<input type="text" name="firstname">
+<br>
+Role title:<br>
+<input type="text" name="lastname">
+<br>
+</form>
+<form>
+  <br>
+When were you in this role?
+<br>
+<input type="radio" name="roledate" value=">5">Within the past 5 years
+<br>
+<input type="radio" name="roledate" value="5-10">5-10 years ago
+<br>
+<input type="radio" name="roledate" value="10-15">10-15 years ago
+<br>
+<input type="radio" name="roledate" value="<15">15+ years ago
+</form> 
+<form>
+  <br>
+Your gender identity
+<br>
+<input type="radio" name="sex" value="m">Male
+<br>
+<input type="radio" name="sex" value="f">Female
+<br>
+<input type="radio" name="sex" value="nb">Non-binary
+<br>
+<input type="radio" name="sex" value="other">Other
+<input type="text" name="sex-other">
+</form> 
+<form>
+  <br>
+Your family status
+<br>
+<input type="radio" name="fstatus" value="single no dep">Single, no dependants
+<br>
+<input type="radio" name="fstatus"value="single dep">Single, with dependants
+<br>
+<input type="radio" name="fstatus" value="partner no dep">Married or partnered, no dependants
+<br>
+<input type="radio" name="fstatus" value="partner dep">Married or partnered, with dependants
+<br>
+<input type="radio" name="fstatus" value="Other">Other
+<input type="text" name="fstatus-other">
+</form> 
+<form>
+  <br>
+Your ethnic group
+<br>
+<input type="radio" name="eg" value="white">White
+<br>
+<input type="radio" name="eg"value="black">Black
+<br>
+<input type="radio" name="eg" value="asian">Asian
+<br>
+<input type="radio" name="eg" value=",ix/mul">Mixed or multiple ethnic groups
+<br>
+<input type="radio" name="eg" value="Other">Other
+<input type="text" name="eg-other">
+</form> 
+<form>
+  <br>
+LGBT status
+<br>
+<input type="radio" name="lgbt" value="het">I dentify as heterosexual
+<br>
+<input type="radio" name="lgbt"value="ho">I indentify as homosexual
+<br>
+<input type="radio" name="lgbt" value="bi">I identify as bisexual
+<br>
+<input type="radio" name="lgbt" value="Other">Other
+<input type="text" name="lgbt-other">
+</form> 
+Your age at time of employment
+<br>
+<input type="radio" name="lgbt" value="het">>18
+<br>
+<input type="radio" name="lgbt"value="ho">18-24
+<br>
+<input type="radio" name="lgbt" value="bi">24-35
+<br>
+<input type="radio" name="lgbt" value="Other">36-40
+<br>
+<input type="radio" name="lgbt" value="Other">41-45
+<br>
+<input type="radio" name="lgbt" value="Other">46-55
+<br>
+<input type="radio" name="lgbt" value="Other">55+
+Starting salary:<br>
+<input type="text" name="firstname">
+<br>
+Ending salary:<br>
+<input type="text" name="firstname">
+<br>
+</form> 
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://phuonghuynh.github.io/js/bower_components/d3/d3.min.js"></script>
+    <script src="http://phuonghuynh.github.io/js/bower_components/d3-transform/src/d3-transform.js"></script>
+    <script src="http://phuonghuynh.github.io/js/bower_components/cafej/src/extarray.js"></script>
+    <script src="http://phuonghuynh.github.io/js/bower_components/cafej/src/misc.js"></script>
+    <script src="http://phuonghuynh.github.io/js/bower_components/cafej/src/micro-observer.js"></script>
+    <script src="http://phuonghuynh.github.io/js/bower_components/microplugin/src/microplugin.js"></script>
+    <script src="frontend_js/bubble-chart.js"></script>
+    <script src="http://phuonghuynh.github.io/js/bower_components/bubble-chart/src/plugins/central-click/central-click.js"></script>
+    <script src="http://phuonghuynh.github.io/js/bower_components/bubble-chart/src/plugins/lines/lines.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.js"></script>
+
+    <script src="index.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </body>
+</html>
